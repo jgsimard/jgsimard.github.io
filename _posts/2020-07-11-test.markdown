@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Test"
+date:   2020-07-11 22:50:16 -0400
+categories: jekyll update
+---
+content
+bonjour $ \nabla$ 
+
+
+$$\begin{align*}
+        p(Y=1|x,\theta)  &= \frac{p(x|Y=1, \theta)p(Y=1|\pi)}{p(x|Y=1, \theta)p(Y=1|\pi)p(x|Y=0, \theta)p(Y=0|\pi)} \\
+        &= \frac{\pi exp(\frac{-1}{2}(x-\mu_1)^{\intercal}\Sigma_1^{-1}(x-\mu_1))} {\pi exp(\frac{-1}{2}(x-\mu_1)^{\intercal}\Sigma_1^{-1}(x-\mu_1)) + (1-\pi) exp(\frac{-1}{2}(x-\mu_0)^{\intercal}\Sigma_0^{-1}(x-\mu_0))} \\
+        &= \frac{1} {1 +  exp(-log(\frac{\pi}{1-\pi}) + \frac{1}{2}(x-\mu_1)^{\intercal}\Sigma^{-1}_1(x-\mu_1) -\frac{1}{2}(x-\mu_0)^{\intercal}\Sigma^{-1}_0(x-\mu_0))} \\
+        &= \frac{1} {1 +  exp(-log(\frac{\pi}{1-\pi}) + \frac{1}{2}(x-\mu_1)^{\intercal}\Sigma^{-1}_1(x-\mu_1) -\frac{1}{2}(x-\mu_0)^{\intercal}\Sigma^{-1}_0(x-\mu_0))} \\
+        &= \frac{1}{1 +  e(
+        x^{\intercal}(\frac{\Sigma^{-1}_{1}-\Sigma^{-1}_{0}}{2})x + 
+        (\mu_0^{\intercal}\Sigma^{-1}_{0} - \mu_1^{\intercal}\Sigma^{-1}_{1})x +
+        (\frac{\mu_1^{\intercal}\Sigma^{-1}_{1}\mu_1 - \mu_0^{\intercal}\Sigma^{-1}_{0}\mu_0}{2}-log(\frac{\pi}{1-\pi}))}\\
+        &= \frac{1}{1 +  e(  -x^{\intercal}cx - bx -  a)}\\
+        &= \sigma(x^{\intercal}cx + bx +  a)\\
+\end{align*}$$
